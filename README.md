@@ -1,2 +1,2 @@
 # tic-tac-toe
-Created with CodeSandbox
+Tic-Tac-Toe Game
