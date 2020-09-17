@@ -36,10 +36,15 @@ export default function App() {
 
   return (
     <div className="app">
-      <h1>TIC TAC TOE</h1>
-      {message}
+      <h2>TIC TAC TOE</h2>
+      <p>{message}</p>
       <Board board={board} handleSquareClick={handleSquareClick} />
-      <button onClick={() => setBoard(Array(9).fill(null))}>New Game</button>
+      <button 
+        onClick={() => setBoard(Array(9).fill(null))}
+        className='new-game-btn'
+      >
+        New Game
+      </button>
       <h5>Coded by Rishav Bharti</h5>
     </div>
   );
