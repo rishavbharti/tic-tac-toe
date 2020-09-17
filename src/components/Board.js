@@ -2,8 +2,7 @@ import React from "react";
 import Square from "./Square";
 import "../styles/root.scss";
 
-const Board = ({board, handleSquareClick}) => {
-
+const Board = ({ board, handleSquareClick }) => {
   const renderSquare = (position) => {
     return (
       <Square

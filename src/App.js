@@ -11,7 +11,7 @@ export default function App() {
 
   let message = winner
     ? `Winner is ${winner}`
-    : `Next player is ${isXNext ? `X` : `0`}`;
+    : `Next player is ${isXNext ? `X` : `O`}`;
 
   if (!board.includes(null) && !winner) {
     message = "It's a tie!";
@@ -25,7 +25,7 @@ export default function App() {
       return prev.map((square, pos) => {
         // console.log(`Square : ${square}, Position: ${pos} \n`);
         if (pos === position) {
-          return isXNext ? "X" : "0";
+          return isXNext ? "X" : "O";
         }
         return square;
       });
@@ -39,9 +39,9 @@ export default function App() {
       <h2>TIC TAC TOE</h2>
       <p>{message}</p>
       <Board board={board} handleSquareClick={handleSquareClick} />
-      <button 
+      <button
         onClick={() => setBoard(Array(9).fill(null))}
-        className='new-game-btn'
+        className="new-game-btn"
       >
         New Game
       </button>
